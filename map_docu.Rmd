@@ -1,0 +1,26 @@
+---
+title: "Data Products Project 1"
+author: "Alex Lydick"
+date: "6/30/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Interactive Map Assignment: Developing Data Products
+This is a simple project from the Develpoing Data Projects course on Coursera taught by Johns Hopkin's University. The requirements of the assignment are to:
+
+* Create a web page using R Markdown that features a map created with Leaflet.
+* Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+* Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity! 
+
+Below is the code that will run on the webpage.
+
+```{r map}
+library(leaflet)
+my_map <- leaflet() %>% addTiles()
+my_map <- my_map %>% addMarkers(lat=33.8911,lng=-84.4684, popup="Truist Park")
+my_map
+```
